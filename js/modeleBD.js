@@ -62,20 +62,26 @@ jQuery(document).ready(function ($) {
 	button.addEventListener("click", function () {
 		// Votre code existant ici
 		for (let [key, album] of albums.entries()) {
+			for (let [key, serie] of series.entries()) {
 			for (let [idAuteur, auteur ] of auteurs.entries()){
-				if (idAuteur == album.idAuteur && txtAuteur.value == auteur.nom){
+				if (idAuteur == album.idAuteur && txtAuteur.value == auteur.nom ){
 						getAlbum(key)
 						return
 			}
 			if (txtTitre.value == album.titre) {
 				console.log(album);
 				getAlbum(key);
+				return
 				// Appel de la fonction getAlbum avec la valeur appropriée (vous devez définir la valeur numérique ici)
 				// album auteur = index
-			}
+			} if (txtSeries.value == serie.titre && txtSeries.value == serie.titre ) {
+				console.log(album);
+				getAlbum(key);
 		}
 	
-	}});
+	}
+}
+ });
 
 
 
