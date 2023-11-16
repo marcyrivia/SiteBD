@@ -62,7 +62,7 @@ jQuery(document).ready(function ($) {
 	button.addEventListener("click", function () {
 		// Votre code existant ici
 		for (let [key, album] of albums.entries()) {
-			for (let [key, serie] of series.entries()) {
+			for (let [idSerie, serie] of series.entries()) {
 			for (let [idAuteur, auteur ] of auteurs.entries()){
 				if (idAuteur == album.idAuteur && txtAuteur.value == auteur.nom ){
 						getAlbum(key)
@@ -74,14 +74,15 @@ jQuery(document).ready(function ($) {
 				return
 				// Appel de la fonction getAlbum avec la valeur appropriée (vous devez définir la valeur numérique ici)
 				// album auteur = index
-			} if (txtSeries.value == serie.titre && txtSeries.value == serie.titre ) {
+			} if (idSerie == album.idSerie && txtSerie.value == serie.nom ) {
 				console.log(album);
 				getAlbum(key);
+				return
 		}
 	
 	}
 }
- });
+ }});
 
 
 
@@ -144,6 +145,8 @@ jQuery(document).ready(function ($) {
 
 		}
 	}
+
+	
 
 	/**
 	 * Affichage des images, les effets sont chainés et traités
