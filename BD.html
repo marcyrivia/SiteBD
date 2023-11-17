@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>
     <title>Les BD</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Liste des BD</h1>
+        <header>
+            <h1>Liste des BD</h1>
+            <div class="divcart">
+                <button id="cart"> Votre Panier<p id="count">0</p></button>
+            </div>
+        </header>
 
         <div class="row">
             <div class="col-sm-4 col-lg-6">
@@ -43,9 +51,11 @@
                     <img src="images/noComicsMini.jpeg" id="albumMini">
                 </div>
             </div>
-            <div class="col-sm-8 col-lg-6">
+            <div class="col-sm-8 col-lg-6 albmDiv">
 
                 <img src="images/noComics.jpeg" id="album">
+
+                <button id="btnPanier" class="panierBtn">Ajouter au panier </button>
 
             </div>
 
